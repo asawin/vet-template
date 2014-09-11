@@ -1,0 +1,35 @@
+br
+br
+
+form.form-horizontal
+    .form-group
+        label.control-label.col-xs-2 Code
+        .col-xs-10
+            input.form-control.input-medium.col-xs-10(type="text", ng-model="editDepartment.code")
+    .form-group
+        label.control-label.col-xs-2 Name
+        .col-xs-10
+            input.form-control.col-xs-10(type="text", ng-model="editDepartment.name")
+    .form-group
+        label.control-label.col-xs-2 Type
+        .col-xs-10
+            select.form-control(ng-model="editDepartment.departmentType")
+                option(value="0") REGISTRATION
+                option(value="1") SPINNING
+                option(value="2") EXAMINATION
+                option(value="3") LAB
+                option(value="4") XRAY
+                option(value="5") MEDICINE
+                option(value="6") CASHIER
+    .form-group
+        .col-xs-2
+        .col-xs-10
+            label
+                input(type="checkbox", ng-model="editDepartment.visitable")
+                |  Visitable
+    .form-group
+        label.control-label.col-xs-2 Name
+        .col-xs-10
+            textarea.form-control.col-xs-10(ng-model="editDepartment.name")
+
+

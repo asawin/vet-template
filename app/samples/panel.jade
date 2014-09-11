@@ -1,0 +1,29 @@
+br
+
+.panel.panel-info
+	.panel-heading  Registration
+		small  create new or edit existing patient
+	.panel-body
+		form.form-horizontal
+			.form-group
+				label.control-label.col-xs-2 โย่ๆ
+				.col-xs-10
+					input.form-control(type="text")
+			.form-group
+				label.control-label.col-xs-2 เย่ๆ
+				.col-xs-10
+					input.form-control(type="text")
+
+
+	.panel-footer
+		.container-fluid.form-horizontal
+			.col-md-6
+			.col-md-4
+				.form-group
+					label.control-label.col-xs-4 ส่งตัวไปยัง
+					.col-xs-8
+						select.form-control(ng-model="visit.departmentNext", ng-options="o as o.code + ' - ' + o.name for o in departments")
+			.col-md-2.pull-right
+				button.btn.btn-primary.pull-right(ng-click="save(visit)")
+					| Go! &nbsp;
+					i.glyphicon.glyphicon-ok-sign

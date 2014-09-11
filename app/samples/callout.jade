@@ -1,0 +1,26 @@
+.bs-callout.callout-warning
+	h4 Pet
+	.container-fluid
+		form.form-horizontal
+			.form-group
+				label.control-label.col-xs-2 โย่ๆ
+				.col-xs-10
+					input.form-control(type="text")
+			.form-group
+				label.control-label.col-xs-2 เย่ๆ
+				.col-xs-10
+					input.form-control(type="text")
+
+
+.container-fluid
+	.col-md-4
+		.bs-callout.callout-danger
+			div(ng-include="'app/samples/table.jade'")
+
+	.col-md-4
+		.bs-callout.callout-warning
+			div(ng-include="'app/samples/table.jade'")
+
+	.col-md-4
+		.bs-callout.callout-danger
+			div(ng-include="'app/samples/table.jade'")

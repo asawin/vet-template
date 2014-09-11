@@ -1,0 +1,50 @@
+| {{testing}} {{isLoggedIn()}}
+form.no-margin
+    fieldset
+        .form-group.no-margin
+            label(for="email") Username
+            .input-group.input-group-lg
+                span.input-group-addon
+                    i.eicon-user
+                input#email.form-control.input-lg(type="text", placeholder="User name", ng-model="credential.username")
+        .form-group
+            label(for="password") Password
+            .input-group.input-group-lg
+                span.input-group-addon
+                    i.icon-lock
+                input#password.form-control.input-lg(type="password", placeholder="Your Password", ng-model="credential.password")
+    .form-actions
+        button.btn.btn-block.btn-lg.btn-danger(type="submit", value="Login",ng-click="login(credential)")
+            span.small-circle
+                i.icon-caret-right
+            small Sign In
+
+        button.btn(ng-click="logout()") Log-out
+
+        button(ng-click="testReq()") Test
+        button(ng-click="fetchPrincipal()") Principal
+        button(ng-click="fetchppp()") PPP
+        button(ng-click="fetchddd()") submit 2014-08-31T08:11:31.176Z
+        button(ng-click="fetchAuthorities()") authorities
+div(has-permission="ROLE_USER") role_user
+
+table.table.responsive.table-condensed.table-hover.table-striped.table-bordered
+    thead
+        tr
+            th(style="width:30px")
+                input(type="checkbox", ng-model="checkAll", ng-click="selectAll(checkAll);")
+            th ชื่อผู้ใช้บริการ
+            th ที่อยู่
+            th เบอร์โทร
+
+    tbody
+        tr(ng-repeat="o in projects")
+            td.align-center
+                input.checkboxx(type="checkbox", ng-mode="isSelected(o)", ng-click="updateSelected(o)")
+            td
+                a(href="#", ng-click="edit(o)") {{o.name}}
+            td
+                input.form-control(type="text", ng-model="o.createdDate",name="date",bs-datepicker)
+                input.form-control(type="text", ng-model="o.createdDate",name="time",bs-timepicker, size="8")
+            td {{o.createdDate | date:'short'}}
+

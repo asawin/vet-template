@@ -1,0 +1,137 @@
+br
+br
+table.table.responsive.table-condensed.table-hover.table-striped
+    thead
+        tr
+            th(style="width:100px")
+            th(style="width:100px")
+            th(style="width:100px")
+            th(style="width:100px")
+    tbody
+        tr
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+        td(rowspan=2)
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo
+        tr
+            
+            td
+                input.form-control(type="text")
+            td
+                select.form-control
+                    option(value="") All
+                    option(value="") New
+            td
+                input.form-control(type="text", bs-datepicker, ng-model="date")
+
+
+
+
+table.table.responsive.table-condensed.table-hover.table-striped
+    thead
+        tr
+            td(stype="width=100px")  Alpo1
+            td(stype="width=100px")
+            td(stype="width=100px")
+            td(stype="width=100px")
+            td(stype="width=100px")
+    tbody
+        tr
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo1
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo2
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo3
+            td(colspan="2")
+                label
+                    input(type="checkbox")
+                    |  Alpo4
+
+        tr
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo1
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo2
+            td
+                .input-group.input-group-sm                    
+                    span.input-group-addon %
+                    input.form-control(type="text")
+            td
+                label
+                    input(type="checkbox")
+                    |  Alpo4
+            td
+                input.form-control(type="number")
+
+
+
+.container-fluid
+    .row
+        .col-md-3
+            label
+                input(type="checkbox")
+                |  Alpo2
+        .col-md-3
+            label
+                input(type="checkbox")
+                |  Alpo2
+        .col-md-3
+            input.form-control(type="text")
+        .col-md-3
+            .input-group                   
+                span.input-group-addon %
+                input.form-control(type="text")
+    .row            
+        .col-md-3
+            label
+                input(type="checkbox")
+                |  Alpo2
+        .col-md-3
+            label
+                input(type="checkbox")
+                |  Alpo2
+        .col-md-3
+            label
+                input(type="checkbox")
+                |  Alpo2
+        .col-md-3
+            input.form-control(type="text", bs-datepicker, ng-model="date")
